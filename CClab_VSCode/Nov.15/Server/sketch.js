@@ -1,68 +1,64 @@
+let d;
+let di = 6;
+let sym = 360 / di;
+let freq;
+let angle;
+let angleVel;
+let radDist;
+let c;
+let r;
+let q;
 function setup() {
-    createCanvas(700, 500)
-    background(0)
-    noStroke()
-    translate(width / 2, height / 2)
-    db = new DarkBramble(20)
-    db.Generate_the_bramblesList()
+  createCanvas(450, 450);
+  angleMode(DEGREES);
+  angle = 0;
+  angleVel = 0.2;
+  radDist = 100;
+  frameRate(30);
+  r = random(255);
+  frameRate(30);
 }
 
-setInterval(function() {
-    db.Traverse_the_List()
-    db.Change_the_List()
-}, 50)
+function draw() {
+  translate(width / 2, height / 2);
+  x = cos(angle) * radDist;// I learn this from Professor Moon's sketch
+  y = sin(angle) * radDist;
+  d = map(x, 0, width, 0, 600);
+  if (freq < 350) {
+    c = color(random(255), r*0.3, random(255), r);
+    stroke(c);
+    background(random(255)*0.3, r , random(255), 2);
+  }
+  freq = frameCount;
+  strokeWeight(map(sin(freq), -6, 6, 0, 15));
+  for (i = 1; i < 360; i += sym) {
+    push();
+    noFill();
+    rotate(i);
+    angle = angle + angleVel;
+    branch(60);
+    ell();
+    pop();
+}}
 
+function branch(br) {
+  ellipse(0, 0, 0, br);
+  translate(0, br);
+  if (br > 12) {
+    rotate(d);
+    branch(br*0.7)
+  }
+}// I learn this from 'Computational Mama' :https://www.youtube.com/watch?v=2gaYq1-XZPE
 
-class DarkBramble {
-    constructor(bramblesNum) {
-        this.tn = bramblesNum
-        this.bramblesList = new Array()
-    }
+function ell(num) {
+  for (let j = 0; j < sym; j++) {
+    rotate(sym);
+    noFill();
+    stroke(0, 0, 0, 2);
+    rect(x * 2.5, y * 2.5, x * 0.5, y * 0.5);
 
-    Generate_the_bramblesList() {
-        for (let i = 0; i < this.tn; i++) {
-            let wid = random(Array.from({ length: 4 }, (item, index) => index + 5))
-            let bramble = new Array()
-            for (let j = 0; j < (wid * 2 - 2); j++) {
-                let angle = random(TWO_PI)
-                let len = random(100)
-                let section = [angle, len, wid - 0.5 * j]
-                bramble.push(section)
-            }
-            this.bramblesList.push(bramble)
-        }
-    }
-
-    Change_the_List() {
-        this.bramblesList.shift()
-        let wid = random(Array.from({ length: 4 }, (item, index) => index + 5))
-        let bramble = new Array()
-        for (let j = 0; j < (wid * 2 - 2); j++) {
-            let angle = random(TWO_PI)
-            let len = random(100)
-            let section = [angle, len, wid - 0.5 * j]
-            bramble.push(section)
-        }
-        this.bramblesList.push(bramble)
-    }
-
-    Traverse_the_List() {
-        for (let bramble of this.bramblesList) {
-            push()
-            for (let section of bramble) {
-                fill(
-                    max((
-                        (((this.bramblesList.indexOf(bramble) - 1) / this.bramblesList.length)) * 255 +
-                        (1 - ((bramble.indexOf(section) + bramble.length - 2) / bramble.length)) * 150), 0)
-                )
-                rotate(section[0])
-                rect(
-                    0, -section[2] / 2, section[1], section[2]
-                )
-                translate(section[1], 0)
-                ellipse(0, 0, section[2])
-            }
-            pop()
-        }
-    }
+    push();
+    scale(-1, 1);
+    pop();
+  }
 }
