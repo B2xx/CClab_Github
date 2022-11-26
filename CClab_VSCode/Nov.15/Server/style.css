@@ -1,9 +1,27 @@
 html, body {
-    margin: 0;
-    padding: 0;
+    margin: 100;
+    padding: 30;
+    background-color: aliceblue;
   }
-  canvas {
-    display: block;
+  
+  #sketch{
+    background-color: azure; 
+    display: flex;
+    justify-content: center;
+    
+    }
+    #title{
+      background-color:mintcream; 
+      display: flex;
+      justify-content: center;
+      
+      }
+  #myContainer {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
   }
 
-  
+.box{
+  background-color: beige;
+}

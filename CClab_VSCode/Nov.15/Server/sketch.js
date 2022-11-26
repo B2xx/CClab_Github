@@ -9,7 +9,8 @@ let c;
 let r;
 let q;
 function setup() {
-  createCanvas(450, 450);
+    let canvas = createCanvas(450, 450);
+  canvas.parent("myContainer");
   angleMode(DEGREES);
   angle = 0;
   angleVel = 0.2;
@@ -25,9 +26,9 @@ function draw() {
   y = sin(angle) * radDist;
   d = map(x, 0, width, 0, 600);
   if (freq < 350) {
-    c = color(random(255), r*0.3, random(255), r);
+    c = color(random(255)*0.5, random(255), random(255), r);
     stroke(c);
-    background(random(255)*0.3, r , random(255), 2);
+    background(random(255), r , random(255), 2);
   }
   freq = frameCount;
   strokeWeight(map(sin(freq), -6, 6, 0, 15));
