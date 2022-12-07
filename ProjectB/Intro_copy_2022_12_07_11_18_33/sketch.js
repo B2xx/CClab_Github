@@ -51,7 +51,7 @@ function mousePressed(){
   }
   //Go to the link of AF's web
   if(s==1 && mouseX >510-sign_Width && mouseX<510+sign_Width && mouseY >635-sign_Height && mouseY< 635+sign_Height){
-window.open('https://github.com/B2xx/CClab_Github/AF_interface_1_2022_12_07_12_05_06')}
+window.open('https://b2xx.github.io/CClab_Github/ProjectB/AF_interface_1_2022_12_07_12_05_06 ')}
   }
 
 
