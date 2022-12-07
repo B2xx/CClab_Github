@@ -48,15 +48,17 @@ function draw(){
 
 function but(){
   button = createButton('continue')
-  button.parent('sketch')
   button.style('font-size', '10px', 'color', '#ffffff');
   button.style("font-family", "myfont");
-  button.position(295+width/2,1.2*height/2+80);
-  button.mousePressed(window.open('https://b2xx.github.io/CClab_Github/ProjectB/AF_interface_2_expression_2022_12_07_12_06_10 '));
+  button.position(265+width/2,1.2*height/2+80);
   button.style("background-color", "#FFFFFF");
   button.style("color", "#000000"); 
-
 }
+
+function mousePressed(){
+  if(mouseX >335 && mouseX<365 && mouseY > 1.2*height/2+80 && mouseY< 1.2*height/2+110){
+    window.open('https://b2xx.github.io/CClab_Github/ProjectB/AF_interface_2_expression_2022_12_07_12_06_10' )}
+      }
 
 function Intro(){
   textFont(myFont)
