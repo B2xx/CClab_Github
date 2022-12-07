@@ -52,13 +52,13 @@ function but(){
   button.style("font-family", "myfont");
   button.position(265+width/2,1.2*height/2+80);
   button.style("background-color", "#FFFFFF");
+  button.mousePressed(openwindow)
   button.style("color", "#000000"); 
 }
 
-function mousePressed(){
-  if(mouseX >335 && mouseX<365 && mouseY > 1.2*height/2+80 && mouseY< 1.2*height/2+110){
-    window.open('https://b2xx.github.io/CClab_Github/ProjectB/AF_interface_2_expression_2022_12_07_12_06_10' )}
-      }
+function openwindow(){
+  window.open('https://b2xx.github.io/CClab_Github/ProjectB/AF_interface_2_expression_2022_12_07_12_06_10' )
+}
 
 function Intro(){
   textFont(myFont)
