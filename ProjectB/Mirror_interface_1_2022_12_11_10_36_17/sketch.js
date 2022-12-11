@@ -11,7 +11,7 @@ let track=[]
 let NUM_OF_TRACK = 3
 
 //Variable for fonts
-let content = "Hey, I'm Jane.\n ……\n You look a bit different for me. \n Do you think you know yourself?"
+let content = "Hey, I'm Jane.\n ……\n Yoo look a bit different for me. \n Do you think you know yourself?"
 let cWidth 
 let disWidth
 let index = 0;
@@ -48,14 +48,16 @@ function draw(){
 
 function but(){
   button = createButton('continue')
-  button.parent('sketch')
   button.style('font-size', '10px', 'color', '#ffffff');
   button.style("font-family", "myfont");
-  button.position(295+width/2,1.2*height/2+80);
-  button.mousePressed(window.open('https://marikotakagi.de/gallery/hanzi-graphy/'));
+  button.position(265+width/2,1.2*height/2+80);
   button.style("background-color", "#FFFFFF");
+  button.mousePressed(openwindow)
   button.style("color", "#000000"); 
+}
 
+function openwindow(){
+  window.open('https://b2xx.github.io/CClab_Github/ProjectB/Mirror_Interface_2_2022_12_11_10_23_21' )
 }
 
 function Intro(){
