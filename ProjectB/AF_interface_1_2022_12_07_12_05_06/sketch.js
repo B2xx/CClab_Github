@@ -67,7 +67,7 @@ function Intro(){
   text(content.substring(0, index),250,1.2*height/3,200,200)
   stroke(0,random([0,255]))
   if (millis() > lastMillis + 200) {
-		index = index + 1;
+		index = index + 1.4;
 		//ONE WORD AT A TIME }
 		lastMillis = millis();
 	}
