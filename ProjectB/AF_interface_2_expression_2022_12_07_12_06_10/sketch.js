@@ -230,7 +230,7 @@ function ditherpunk() {
       imageMode(CENTER)
       scale(384/capture.width)
       // tint(100, 130, 240)
-      image(imgTiles[imgIndex], x+900, y+340);
+      image(imgTiles[imgIndex], x+width*0.79, y+0.44*height);
       pop()
     }
   }
