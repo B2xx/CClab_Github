@@ -67,7 +67,7 @@ function setup() {
   emoDic = createNumberDict
   // mysound.loop()
   //canvas and camera
-  canvas = createCanvas(1280,800);
+  canvas = createCanvas(1280,600);
   canvas.parent("myContainer");
   capture.hide();
   imgLeft = createImage(520, 480);
@@ -104,7 +104,7 @@ function gotFaces(error, result) {
 }
 
 function draw() {
-  clear();
+  background(0)
   image(capture,width/2,0);
   rectBut();
   Title();
