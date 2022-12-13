@@ -104,7 +104,7 @@ function gotFaces(error, result) {
 }
 
 function draw() {
-  background(0)
+  background(255)
   image(capture,width/2,0);
   rectBut();
   Title();
