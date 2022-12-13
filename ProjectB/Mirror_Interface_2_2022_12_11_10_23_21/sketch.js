@@ -67,7 +67,7 @@ function setup() {
   emoDic = createNumberDict
   // mysound.loop()
   //canvas and camera
-  canvas = createCanvas(1280,600);
+  canvas = createCanvas(1280,700);
   canvas.parent("myContainer");
   capture.hide();
   imgLeft = createImage(520, 480);
@@ -121,7 +121,7 @@ function draw() {
   rect(50,height/2,100,height)
   rect(width-50,height/2,100,height)
   pop()
-  instruct(250,560,20);
+  instruct(270,560,20);
   mouseCursorArrow();
 }
 function Title(){
@@ -131,7 +131,7 @@ function Title(){
   noStroke()
   textFont(myFont)
   textSize(32)
-  text("Mirror",100,560)
+  text("Mirror \n \n Standard Expression",120,560)
   pop()
 }
 
