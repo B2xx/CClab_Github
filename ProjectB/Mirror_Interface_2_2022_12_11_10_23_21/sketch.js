@@ -112,7 +112,6 @@ function draw() {
     drawExpressions(detections);
     drawBoxes(detections);
     drawLandmarks(detections);
-  instruct(250,560,20);
   ditherpunk()
   push()
   noStroke()
@@ -122,6 +121,7 @@ function draw() {
   rect(50,height/2,100,height)
   rect(width-50,height/2,100,height)
   pop()
+  instruct(250,560,20);
   mouseCursorArrow();
 }
 function Title(){
