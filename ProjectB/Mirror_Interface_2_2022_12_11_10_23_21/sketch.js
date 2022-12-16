@@ -131,7 +131,7 @@ function Title(){
   noStroke()
   textFont(myFont)
   textSize(32)
-  text("Mirror \n \n Standard Expression",120,560)
+  text("Mirror",120,560)
   pop()
 }
 
@@ -146,7 +146,7 @@ function instruct(x,y,yspace){
   text("Instructions",x,y-yspace)
   pop()
   textSize(16)
-  text("Click'Mirror'to know how you looks like for Jane.",x,y)
+  text("Click'Snapshot'to freeze the frame.",x,y)
   text("Click'Save Image'to save images.",x,y+yspace)
   text("Click'Replay'to play it again.",x,y+yspace*2)
   pop()
@@ -162,7 +162,7 @@ function rectBut(){
   textAlign(CENTER)
   textFont(myFont)
   textSize(20)
-  text ("Mirror",935,520)
+  text ("Snapshot",935,520)
   text ("Save Image",935,553)
   text ("Replay",1100,537)
   pop()
